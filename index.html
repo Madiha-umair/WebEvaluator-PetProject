@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="./js/script.js"></script>
+    <title>Review Generator</title>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header id="welcome">
+        <h1>WEB EVALUATOR</h1>
+        <img src="images/logo.png">
+	</header>
+    <main id="main">
+        <h2>Welcome to our website!</h2>
+        <p>Do you want to share your experience for different websites?</p>
+        <div>If YES then enter your name please!</div>
+    </main>
+    <!-- FORM SECTION -->
+    <section id="form1">
+        <form name="personal_information" action="#" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <!--PERSON NAME -->
+                <div>
+                    <label for="fName">First Name:</label>
+				    <input type="text" name="fName" id="i-fName"/>
+                    <span id="ErrfName"></span>
+                </div>
+                <div>
+                    <label for="lName">Last Name:</label>
+                    <input type="text" name="lName" id="i-lName"/>
+                    <span id="ErrlName"></span>
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="i-age"/>
+                    <span id="Errage"></span>
+                </div>
+                <div id="btn-person-info" >
+                    <button class="button"  type="submit" >Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <section id="form2">
+        <form name="ReviewForm" action="#" method="POST">
+            <fieldset>
+				<legend>Site Information</legend>
+			    <!-- SITE INFORMATION -->
+                <div>
+                    <label for="siteName">Site Name:</label>
+                    <input type="text" name="sName" id="s-Name"/>
+                    <span id="ErrsName"></span>
+                </div>
+                <div>
+                    <label for="siteUrlName">Site URL:</label>
+                    <input type="text" name="urlName" id="url-Name"/>
+                    <span id="ErrUrlName"></span>
+                </div>
+            </fieldset>
+			<fieldset>
+				<legend>Review</legend>
+                <p>* You can rate the quality of each property out of 5. Where 5 is the highest number and 0 is the lowest.</p>
+			<!-- REVIEW FEATURES -->
+            <div>
+                <label for="visual-design">Visual Design:</label>
+                <input type="number" name="vdesign" id="i-vdesign"/>
+                <span id="ErrDesign"></span>
+            </div>
+            <div>
+                <label for="responsiveness">Responsiveness:</label>
+                <input type="number" name="response" id="i-response"/>
+                <span id="ErrResponse"></span>
+            </div>
+            <div>
+                <label for="easy-to-navigate">Easy to navigate:</label>
+                <input type="number" name="navigate" id="i-navigate"/>
+                <span id="ErrNav"></span>
+            </div>
+            <div>
+                <label for="accessible">Accessible:</label>
+                <input type="number" name="accessible" id="i-accessible"/>
+                <span id="ErrAccess"></span>
+            </div>
+            <div>
+                <label for="loading-time">Loading Time:</label>
+                <input type="number" name="loading" id="i-loading"/>
+                <span id="ErrLoad"></span>
+            </div>
+            <div>
+                <label for="content">Content:</label>
+                <input type="number" name="content" id="i-content"/>
+                <span id="ErrContent"></span>
+            </div>
+			</fieldset>
+            <div id="btn-site-info" >
+                <input id="reset" type="reset" value="RESET" />
+                <button class="button"  type="submit" >SUBMIT</button>
+            </div>
+        </form>
+    </section>	
+<!-- OUTPUT MESSAGE SECTION -->
+	<footer id="footer">
+		<h2>Thank you <span id="fname"></span> <span id="lname"></span> For visiting our site!</h2>
+        <h3>OVERALL REVIEW</h3>
+        <section id="result0">
+            <p>&#60 </p>
+        </section>
+        <section id="result1">
+            <div>Name of Person:<span id="firstname"></span> <span id="lastname"></span></div>
+            <div>Name of Site:<span id="nameOfSite"></span></div>
+            <div>URL:<span id="siteUrl"></span></div>
+            <div>Rating:<span id="noOfStar"></span></div>
+        </section>
+        <section id="result2">
+            <div>Name of Person:John Alice</div>
+            <div>Name of Site:IKEA  </div>
+            <div>URL:https://www.ikea.com/ca/en/</div>
+            <div>Rating:⭐⭐⭐⭐</div>
+        </section>
+        <section id="result3">
+            <div>Name of Person:Anthony James</div>
+            <div>Name of Site:THE BAY  </div>
+            <div>URL:https://www.thebay.com/</div>
+            <div>Rating:5⭐⭐⭐⭐⭐</div>
+        </section>
+        <section id="result4">
+            <p>&gt </p>
+        </section>
+      <!-- <p>Overall review of "<span id="nameOfSite"></span>" Website having URL "<span id="siteUrl"></span> " is <span id="noOfStar"></span>&#11088;! </p>-->
+    </footer>
+</body>
+</html>
